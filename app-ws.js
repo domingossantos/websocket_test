@@ -30,7 +30,7 @@ function messages_queue() {
         //process the message
         this.clients.forEach(client => {
             if (client.readyState === WebSocket.OPEN) {
-                console.log(JSON.stringify(client.id));
+                //console.log(JSON.stringify(client.));
                 client.send(message.content.toString());
                 console.log("processing " + message.content.toString());
             }
